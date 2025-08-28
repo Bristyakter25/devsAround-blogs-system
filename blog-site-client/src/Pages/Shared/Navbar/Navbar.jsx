@@ -16,9 +16,10 @@ const Navbar = () => {
 
     const links = 
     <>
-    <ul className="flex gap-x-3">
+    <ul className="flex text-[17px] gap-x-3">
        <NavLink to ="/"> <li>Home</li></NavLink>
        <NavLink to ="/createBlogs"> <li>Create Blogs</li></NavLink>
+       <NavLink to ="/myBlogs"> <li>My Blogs</li></NavLink>
         <li>All Blogs</li>
         
     </ul>

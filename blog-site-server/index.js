@@ -52,6 +52,42 @@ async function run() {
 
     })
 
+//     app.get("/blogs/:id", async (req, res) => {
+//   const { id } = req.params;
+
+//   if (!ObjectId.isValid(id)) {
+//     return res.status(400).json({ error: "Invalid blog ID" });
+//   }
+
+//   const blog = await blogsCollection.findOne({ _id: new ObjectId(id) });
+
+//   if (!blog) {
+//     return res.status(404).json({ error: "Blog not found" });
+//   }
+
+//   res.json(blog);
+// });
+
+app.get("/blogs/:slug", async (req, res) => {
+  const { slug } = req.params;
+  const blog = await blogsCollection.findOne({ slug });
+  if (!blog) return res.status(404).json({ error: "Blog not found" });
+  res.json(blog);
+});
+
+app.get("/blogs/user/:email", async (req, res) => {
+  const { email } = req.params;
+
+  try {
+    const userBlogs = await blogsCollection.find({ authorEmail: email }).toArray();
+    res.json(userBlogs);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to fetch user blogs" });
+  }
+});
+
+
     app.post('/users', async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -124,6 +160,51 @@ app.post('/blogs', async (req, res) => {
     console.error(err);
     res.status(500).send({ error: "Failed to create blog" });
   }
+});
+
+app.put("/blogs/:id", async (req, res) => {
+  const { id } = req.params;
+  const { email, title, content, slug, excerpt, tags, coverImageUrl } = req.body;
+
+  if (!ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid ID" });
+
+  const blog = await blogsCollection.findOne({ _id: new ObjectId(id) });
+  if (!blog) return res.status(404).json({ error: "Blog not found" });
+
+  if (blog.authorEmail !== email) {
+    return res.status(403).json({ error: "You are not allowed to edit this blog" });
+  }
+
+  const updatedBlog = {
+    title,
+    slug,
+    content,
+    excerpt,
+    tags,
+    coverImageUrl,
+    updatedAt: new Date(),
+  };
+
+  await blogsCollection.updateOne({ _id: new ObjectId(id) }, { $set: updatedBlog });
+  res.json({ message: "Blog updated successfully" });
+});
+
+// Delete operation
+app.delete("/blogs/:id", async (req, res) => {
+  const { id } = req.params;
+  const { email } = req.body; // logged-in user's email
+
+  if (!ObjectId.isValid(id)) return res.status(400).json({ error: "Invalid ID" });
+
+  const blog = await blogsCollection.findOne({ _id: new ObjectId(id) });
+  if (!blog) return res.status(404).json({ error: "Blog not found" });
+
+  if (blog.authorEmail !== email) {
+    return res.status(403).json({ error: "You are not allowed to delete this blog" });
+  }
+
+  await blogsCollection.deleteOne({ _id: new ObjectId(id) });
+  res.json({ message: "Blog deleted successfully" });
 });
 
 

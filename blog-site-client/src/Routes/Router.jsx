@@ -9,6 +9,9 @@ import Login from "../Pages/Authentication/Login";
 import SocialLogin from "../Pages/Authentication/SocialLogin";
 import CreateBlogs from "../Pages/Blogs/CreateBlogs";
 import HomePage from "../Pages/Home/HomePage";
+import BlogDetails from "../Pages/Blogs/BlogDetails";
+import MyBlogs from "../Pages/Blogs/MyBlogs";
+import EditBlog from "../Pages/Blogs/EditBlog";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +38,18 @@ export const router = createBrowserRouter([
       {
         path: "/createBlogs",
         element: <CreateBlogs></CreateBlogs>
+      },
+      {
+        path: "/myBlogs",
+        element: <MyBlogs></MyBlogs>
+      },
+      {
+        path: "/edit-blog/:slug",
+        element: <EditBlog></EditBlog>
+      },
+      {
+        path: "/blogs/:slug",
+        element: <BlogDetails></BlogDetails>
       }
     ]
   },
