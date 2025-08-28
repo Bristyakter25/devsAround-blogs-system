@@ -1,7 +1,7 @@
 import { useContext} from "react";
 import AuthContext from "../../Context/AuthContext";
 import Swal from 'sweetalert2';
-import { Link } from "react-router-dom";
+
 import SocialLogin from "./SocialLogin";
 
 const SignUp = () => {
@@ -14,11 +14,29 @@ const handleRegister = e => {
   const name = form.name.value;
   const email = form.email.value;
   const password = form.password.value;
-console.log(name);
+  console.log(name);
+
+//   firebase authentication
    createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-        setUser(createdUser); // just set user directly
+        setUser(createdUser);
+
+
+// save to DB
+          fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        password, 
+      }),
+    })
+    .then(res => res.json())
+    .then(data => console.log("User saved to DB", data))
+    .catch(err => console.error("DB save error:", err));
+
         Swal.fire({
           position: "top-end",
           icon: "success",
