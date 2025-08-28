@@ -51,6 +51,7 @@ const CreateBlog = () => {
       coverImageUrl: coverImage, // only file input goes here
       tags: tags.split(",").map((t) => t.trim()),
       authorEmail: user.email,
+      authorName: user.displayName,
       publishedAt: new Date(),
       createdAt: new Date(),
       updatedAt: new Date(),

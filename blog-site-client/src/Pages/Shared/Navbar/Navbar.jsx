@@ -24,8 +24,8 @@ const Navbar = () => {
     </ul>
     </>
     return (
-        <div>
-           <div className="navbar bg-base-100 shadow-sm">
+        <div className="mx-10">
+           <div className="navbar  bg-base-100 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,13 +37,13 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">DevsAround</a>
+    <a className="btn btn-ghost text-2xl italic font-bold">DevsAround</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     
   </div>
   <div className="navbar-end">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 mr-3">
       {links}
     </ul>
     {user ? (
@@ -53,7 +53,7 @@ const Navbar = () => {
           ) : (
             <>
               <Link to="/signIn">
-                <button className="btn">Sign In</button>
+                <button className="btn mr-2">Sign In</button>
               </Link>
               <Link to="/signUp">
                 <button className="btn">Sign Up</button>

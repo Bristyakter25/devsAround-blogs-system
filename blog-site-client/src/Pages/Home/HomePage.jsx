@@ -7,7 +7,7 @@ const HomePage = () => {
     return (
         <div>
             
-            <DisplayCreatedBlogs></DisplayCreatedBlogs>
+        <DisplayCreatedBlogs></DisplayCreatedBlogs>
            <DemoBlogs></DemoBlogs>
            
         </div>

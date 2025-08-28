@@ -3,12 +3,13 @@ import AuthContext from "../../Context/AuthContext";
 import Swal from 'sweetalert2';
 
 import SocialLogin from "./SocialLogin";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
-     const {createUser,setUser} = useContext(AuthContext);
+   const {createUser,setUser} = useContext(AuthContext);
 
 
-const handleRegister = e => {
+const handleRegister = (e) => {
   e.preventDefault();
   const form = e.target;
   const name = form.name.value;
@@ -16,37 +17,27 @@ const handleRegister = e => {
   const password = form.password.value;
   console.log(name);
 
-//   firebase authentication
-   createUser(email, password)
-      .then((result) => {
-        const createdUser = result.user;
-        setUser(createdUser);
+  createUser(email,password)
+    .then(result =>{
+       const createdUser = result.user;
 
-
-// save to DB
-          fetch("http://localhost:5000/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        email,
-        password, 
-      }),
-    })
-    .then(res => res.json())
-    .then(data => console.log("User saved to DB", data))
-    .catch(err => console.error("DB save error:", err));
-
+       return updateProfile(createdUser, {
+        displayName: name,
+       
+      }).then(() => {
+        setUser({ ...createdUser, displayName: name });
         Swal.fire({
           position: "top-end",
           icon: "success",
           title: "You are Successfully Registered!",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 1500
         });
-      })
+      });
+
+    })
     .catch(error =>{
-        console.log(error);
+      console.log(error);
       Swal.fire({
         icon: "error",
         title: "Oops...",

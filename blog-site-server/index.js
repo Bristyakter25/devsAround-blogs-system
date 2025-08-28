@@ -97,6 +97,7 @@ app.post('/blogs', async (req, res) => {
       coverImageUrl,
       tags,
       authorEmail,
+      authorName,
       publishedAt,
       createdAt,
       updatedAt
@@ -111,6 +112,7 @@ app.post('/blogs', async (req, res) => {
       coverImageUrl,
       tags,
       authorEmail,
+      authorName,
       publishedAt: publishedAt || null,
       createdAt: createdAt || new Date(),
       updatedAt: updatedAt || new Date(),
