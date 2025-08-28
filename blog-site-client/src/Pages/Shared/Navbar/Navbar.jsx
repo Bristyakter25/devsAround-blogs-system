@@ -18,6 +18,7 @@ const Navbar = () => {
     <>
     <ul className="flex gap-x-3">
        <NavLink to ="/"> <li>Home</li></NavLink>
+       <NavLink to ="/createBlogs"> <li>Create Blogs</li></NavLink>
         <li>All Blogs</li>
         
     </ul>
@@ -36,7 +37,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">DevsAround</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     
