@@ -27,7 +27,12 @@ const AllBlogs = () => {
   });
 
   return (
-    <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div>
+      <h2 className="text-3xl mt-20 font-extrabold text-black mb-8 text-center">
+        All Blogs
+      </h2>
+      <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      
       {/* Left Sidebar */}
       <div className="md:col-span-1 flex flex-col gap-6">
         {/* Search */}
@@ -107,6 +112,7 @@ const AllBlogs = () => {
         )}
       </div>
     </div>
+  </div>
   );
 };
 
