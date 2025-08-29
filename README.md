@@ -4,6 +4,8 @@
 ## Project Introduction
 This is a **dynamic blog platform** built with **React.js**, **Node.js**, **Express.js**, and **MongoDB**. Users can read blogs, create posts, search by tags, and manage their own blogs.  
 
+** Live Site:**  `https://react-auth-private-route-c0a3a.web.app/`
+
 **Screenshots/GIF:**  
 ![Home Page](./screenshots/home.png)  
 ![Blog Detail](./screenshots/blog-detail.png)  
@@ -34,12 +36,12 @@ This is a **dynamic blog platform** built with **React.js**, **Node.js**, **Expr
 
 Frontend (frontend/.env.example):
 
-REACT_APP_FIREBASE_API_KEY=
-REACT_APP_FIREBASE_AUTH_DOMAIN=
-REACT_APP_FIREBASE_PROJECT_ID=
-REACT_APP_FIREBASE_STORAGE_BUCKET=
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
-REACT_APP_FIREBASE_APP_ID=
+VITE_API_KEY=
+VITE_AUTH_DOMAIN=
+VITE_PROJECT_ID=
+VITE_STORAGE_BUCKET=
+VITE_MESSAGING_SENDER_ID=
+VITE_APP_ID=
 
 Backend (backend/.env.example):
 
@@ -77,5 +79,4 @@ DB_PASS=
 
 ````
 
----
 
