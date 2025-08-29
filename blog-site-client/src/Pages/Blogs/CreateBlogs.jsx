@@ -85,7 +85,7 @@ const CreateBlog = () => {
       type="button"
       onClick={command}
       className={`px-2 py-1 border rounded ${
-        isActive ? "bg-blue-500 text-white" : "bg-white text-gray-800"
+        isActive ? "bg-black text-white" : "bg-white text-gray-800"
       }`}
     >
       {label}
@@ -129,7 +129,7 @@ const CreateBlog = () => {
   {/* Custom button */}
   <label
     htmlFor="coverImageInput"
-    className="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-700"
+    className="px-4 py-2 bg-black text-white rounded cursor-pointer hover:bg-gray-800"
   >
     Choose Image
   </label>
@@ -219,7 +219,7 @@ const CreateBlog = () => {
 
         <button
           type="submit"
-          className="px-6 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700"
+          className="px-6 py-3 bg-black text-white font-medium rounded-xl hover:bg-gray-800"
         >
           Publish Blog
         </button>
