@@ -3,6 +3,7 @@ import AuthContext from "../../Context/AuthContext";
 import Swal from 'sweetalert2';
 
 import SocialLogin from "./SocialLogin";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 const {signInUser} = useContext(AuthContext);
@@ -98,10 +99,8 @@ const {signInUser} = useContext(AuthContext);
 
         {/* Footer */}
         <p className="text-center text-sm text-gray-600 mt-6">
-          Already have an account?{" "}
-          <a href="#" className="text-black font-medium hover:underline">
-            Log in
-          </a>
+          New Here?{" "}
+          <Link to="/signUp" className="font-bold text-black">Join Us</Link> 
         </p>
       </div>
     </div>

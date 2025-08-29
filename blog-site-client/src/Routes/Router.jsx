@@ -12,6 +12,7 @@ import HomePage from "../Pages/Home/HomePage";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
 import MyBlogs from "../Pages/Blogs/MyBlogs";
 import EditBlog from "../Pages/Blogs/EditBlog";
+import LoginRequired from "../Pages/Authentication/LoginRequired";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path: "/createBlogs",
         element: <CreateBlogs></CreateBlogs>
+      },
+      {
+        path: "/loginRequired",
+        element: <LoginRequired></LoginRequired>
       },
       {
         path: "/myBlogs",

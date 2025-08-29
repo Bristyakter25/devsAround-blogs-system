@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 import SocialLogin from "./SocialLogin";
 import { updateProfile } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
    const {createUser,setUser} = useContext(AuthContext);
@@ -125,9 +126,7 @@ const handleRegister = (e) => {
         {/* Footer */}
         <p className="text-center text-sm text-gray-600 mt-6">
           Already have an account?{" "}
-          <a href="#" className="text-black font-medium hover:underline">
-            Log in
-          </a>
+          <Link to="/signIn" className="font-bold text-black">Log In</Link>
         </p>
       </div>
     </div>
