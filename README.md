@@ -8,8 +8,11 @@ This is a **dynamic blog platform** built with **React.js**, **Node.js**, **Expr
 
 
 **Screenshots/GIF:**  
-![Home Page](./screenshots/home.png)  
-![Blog Detail](./screenshots/blog-detail.png)  
+![Home Page](./screenshots/home-page.png)  
+![My Blogs Page](./screenshots/my-blogs-page.png)  
+![Create Blogs Page](./screenshots/create-blog-page.png)  
+![All Blog Page](./screenshots/all-blogs-page.png)  
+![Sign In Page](./screenshots/sign-in-page.png)  
 
 ---
 
