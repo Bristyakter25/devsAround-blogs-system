@@ -13,6 +13,7 @@ import BlogDetails from "../Pages/Blogs/BlogDetails";
 import MyBlogs from "../Pages/Blogs/MyBlogs";
 import EditBlog from "../Pages/Blogs/EditBlog";
 import LoginRequired from "../Pages/Authentication/LoginRequired";
+import AllBlogs from "../Pages/Blogs/AllBlogs";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: "/myBlogs",
         element: <MyBlogs></MyBlogs>
+      },
+      {
+        path: "/allBlogs",
+        element: <AllBlogs></AllBlogs>
       },
       {
         path: "/edit-blog/:slug",
