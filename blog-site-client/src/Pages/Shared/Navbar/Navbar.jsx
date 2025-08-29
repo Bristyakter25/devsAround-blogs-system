@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   const links = (
-    <ul className="flex text-[17px] gap-x-3">
+    <ul className="flex text-[17px] font-semibold gap-x-3">
       <NavLink to="/"><li>Home</li></NavLink>
 
       {/* Protected: Create Blogs */}

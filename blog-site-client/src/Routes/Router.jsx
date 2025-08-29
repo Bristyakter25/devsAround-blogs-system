@@ -14,6 +14,7 @@ import MyBlogs from "../Pages/Blogs/MyBlogs";
 import EditBlog from "../Pages/Blogs/EditBlog";
 import LoginRequired from "../Pages/Authentication/LoginRequired";
 import AllBlogs from "../Pages/Blogs/AllBlogs";
+import ContactForm from "../Pages/Home/ContactForm";
 
 export const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ export const router = createBrowserRouter([
       {
         path: "/blogs/:slug",
         element: <BlogDetails></BlogDetails>
+      },
+      {
+        path: "contactForm",
+        element: <ContactForm></ContactForm>
       }
     ]
   },
