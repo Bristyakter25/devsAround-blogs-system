@@ -8,7 +8,7 @@ const AllBlogs = () => {
 
   // Fetch all blogs
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://blog-site-server-gamma.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err));

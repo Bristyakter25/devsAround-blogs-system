@@ -6,7 +6,7 @@ const BlogDetails = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs/${slug}`)
+    fetch(`https://blog-site-server-gamma.vercel.app/blogs/${slug}`)
       .then(res => res.json())
       .then(data => setBlog(data))
       .catch(err => console.error(err));

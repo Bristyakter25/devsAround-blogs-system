@@ -58,7 +58,7 @@ const CreateBlog = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/blogs", {
+      const res = await fetch("https://blog-site-server-gamma.vercel.app/blogs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(blogData),

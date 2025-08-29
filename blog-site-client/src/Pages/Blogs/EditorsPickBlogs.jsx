@@ -5,7 +5,7 @@ const EditorsPickBlogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/blogs/editors-pick")
+    fetch("https://blog-site-server-gamma.vercel.app/blogs/editors-pick")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err));

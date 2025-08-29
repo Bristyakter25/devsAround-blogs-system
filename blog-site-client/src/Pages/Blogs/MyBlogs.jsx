@@ -10,7 +10,7 @@ const MyBlogs = () => {
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch(`http://localhost:5000/blogs/user/${user.email}`)
+    fetch(`https://blog-site-server-gamma.vercel.app/blogs/user/${user.email}`)
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err));
@@ -44,7 +44,7 @@ const MyBlogs = () => {
     if (!result.isConfirmed) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/blogs/${id}`, {
+      const res = await fetch(`https://blog-site-server-gamma.vercel.app/blogs/${id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: user.email }),

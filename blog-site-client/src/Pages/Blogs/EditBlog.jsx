@@ -29,7 +29,7 @@ const EditBlog = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs/${slug}`)
+    fetch(`https://blog-site-server-gamma.vercel.app/blogs/${slug}`)
       .then((res) => res.json())
       .then((data) => {
         setBlog(data);
@@ -63,7 +63,7 @@ const EditBlog = () => {
     };
 
     try {
-      const res = await fetch(`http://localhost:5000/blogs/${blog._id}`, {
+      const res = await fetch(`https://blog-site-server-gamma.vercel.app/blogs/${blog._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedBlog),
