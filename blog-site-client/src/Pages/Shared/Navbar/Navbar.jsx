@@ -72,14 +72,14 @@ const Navbar = () => {
         {/* Right */}
         <div className="navbar-end">
           {user ? (
-            <button onClick={handleSignOut} className="btn">Sign Out</button>
+            <button onClick={handleSignOut} className="btn hover:bg-black hover:text-white">Sign Out</button>
           ) : (
             <>
               <Link to="/signIn">
-                <button className="btn mr-2">Sign In</button>
+                <button className="btn mr-2 hover:bg-black hover:text-white">Sign In</button>
               </Link>
               <Link to="/signUp">
-                <button className="btn">Sign Up</button>
+                <button className="btn hover:bg-black hover:text-white">Sign Up</button>
               </Link>
             </>
           )}

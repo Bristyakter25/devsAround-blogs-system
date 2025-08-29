@@ -14,7 +14,7 @@ const LoginRequired = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-3xl font-extrabold text-red-500 mb-4 drop-shadow-sm"
+          className="text-3xl font-extrabold text-black mb-4 drop-shadow-sm"
         >
           🔒 Login Required
         </motion.h1>
@@ -31,7 +31,7 @@ const LoginRequired = () => {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/signIn"
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition duration-300 font-medium"
+            className="bg-black text-white px-6 py-3 rounded-xl shadow-md hover:shadow-xl transition duration-300 font-medium"
           >
             Go to Login
           </Link>

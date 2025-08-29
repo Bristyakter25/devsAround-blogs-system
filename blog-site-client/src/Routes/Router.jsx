@@ -15,11 +15,13 @@ import EditBlog from "../Pages/Blogs/EditBlog";
 import LoginRequired from "../Pages/Authentication/LoginRequired";
 import AllBlogs from "../Pages/Blogs/AllBlogs";
 import ContactForm from "../Pages/Home/ContactForm";
+import ErrorPage from "../Pages/Error/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
