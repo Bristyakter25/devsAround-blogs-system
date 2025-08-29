@@ -1,14 +1,18 @@
 // Footer.jsx
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
   <nav className="grid grid-flow-col gap-4">
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+  <ul className="flex  font-semibold gap-x-3">
+    
+    <NavLink to="/"><li>Home</li></NavLink>
+
+      <NavLink to="/allBlogs"><li>All Blogs</li></NavLink>
+      <NavLink to="/contactForm"><li>Contact Us</li></NavLink>
+  </ul>
   </nav>
   <nav>
     <div className="grid grid-flow-col gap-4">
@@ -48,7 +52,7 @@ const Footer = () => {
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className="font-bold italic">DevsAround</span> Ltd</p>
   </aside>
 </footer>
   );
