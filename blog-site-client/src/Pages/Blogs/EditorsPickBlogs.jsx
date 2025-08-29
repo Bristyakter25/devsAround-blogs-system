@@ -27,7 +27,7 @@ const EditorsPickBlogs = () => {
             <img
               src={featuredBlog.coverImageUrl}
               alt={featuredBlog.title}
-              className="w-full h-96 object-cover"
+              className="w-full h-72 object-cover"
             />
             <div className="p-6 bg-gray-100">
               <p className="text-gray-500 mb-2">
@@ -43,24 +43,25 @@ const EditorsPickBlogs = () => {
         )}
 
         {/* Right: Other Blogs */}
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="w-1/2 h-full flex flex-col gap-4">
           {otherBlogs.map((blog) => (
             <div
               key={blog._id}
-              className="flex gap-4 items-center border-b pb-3 hover:bg-gray-50 transition"
+              className="flex gap-4  items-center border-b py-5 hover:bg-gray-50 transition"
             >
               <img
                 src={blog.coverImageUrl}
                 alt={blog.title}
-                className="w-32 h-20 object-cover rounded"
+                className="w-40 h-28  object-cover rounded"
               />
               <div>
                 <p className="text-gray-500 text-sm">
-                  {new Date(blog.publishedAt).toLocaleDateString()} / {blog.authorName}
+                  {new Date(blog.publishedAt).toLocaleDateString()} / <span className="font-bold">{blog.authorName}</span>
                 </p>
                 <Link to={`/blogs/${blog.slug}`}>
                   <h3 className="text-lg font-semibold hover:underline">{blog.title}</h3>
                 </Link>
+                <p className="mt-3 text-gray-700 line-clamp-4">{blog.excerpt}</p>
               </div>
             </div>
           ))}
