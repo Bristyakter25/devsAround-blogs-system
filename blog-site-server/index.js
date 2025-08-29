@@ -52,6 +52,21 @@ async function run() {
 
     })
 
+    // Fetch all blogs marked as editor's pick
+app.get("/blogs/editors-pick", async (req, res) => {
+    try {
+        const result = await blogsCollection
+            .find({ isEditorsPick: true }) // only blogs where editorsPick is true
+            .sort({ publishedAt: -1 })   // optional: latest first
+            .toArray();
+        res.send(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({ error: "Failed to fetch editor's pick blogs" });
+    }
+});
+
+
 //     app.get("/blogs/:id", async (req, res) => {
 //   const { id } = req.params;
 

@@ -1,6 +1,7 @@
 
 import DemoBlogs from '../Blogs/DemoBlogs';
 import DisplayCreatedBlogs from '../Blogs/displayCreatedBlogs';
+import EditorsPickBlogs from '../Blogs/EditorsPickBlogs';
 
 
 const HomePage = () => {
@@ -8,7 +9,8 @@ const HomePage = () => {
         <div>
             
         <DisplayCreatedBlogs></DisplayCreatedBlogs>
-           <DemoBlogs></DemoBlogs>
+           {/* <DemoBlogs></DemoBlogs> */}
+           <EditorsPickBlogs></EditorsPickBlogs>
            
         </div>
     );
