@@ -4,7 +4,8 @@
 ## Project Introduction
 This is a **dynamic blog platform** built with **React.js**, **Node.js**, **Express.js**, and **MongoDB**. Users can read blogs, create posts, search by tags, and manage their own blogs.  
 
-** Live Site:**  `https://react-auth-private-route-c0a3a.web.app/`
+**Live Site:** [Blog Website](https://blog-website-8c111.web.app/)
+
 
 **Screenshots/GIF:**  
 ![Home Page](./screenshots/home.png)  
@@ -57,8 +58,9 @@ DB_PASS=
 
 ## Useful URLs
 
-* LIVE URL: `https://react-auth-private-route-c0a3a.web.app/`
-* API Docs: `https://blog-site-server-gamma.vercel.app/`
+**Live Site:** [Blog Website](https://blog-website-8c111.web.app/)
+
+**API Docs:**  [Server](https://blog-site-server-gamma.vercel.app/)
 
 
 ---
