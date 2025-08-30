@@ -32,10 +32,24 @@ This is a **dynamic blog platform** built with **React.js**, **Node.js**, **Expr
 
 ---
 
-### Install Dependencies
-```bash
-#  npm install
+##  Installation
 
+ Clone the repository  
+```sh
+git clone https: https://github.com/Bristyakter25/devsAround-blogs-system
+cd devsAround-blogs-system
+```
+
+ Install dependencies  
+```sh
+npm install
+```
+ Run the development server  
+```sh
+npm run dev
+```
+
+---
 ### Environment Variables
 
 Frontend (frontend/.env.example):
@@ -51,6 +65,51 @@ Backend (backend/.env.example):
 
 DB_USER=
 DB_PASS=
+
+### **Frontend (Client-Side) Dependencies**
+```json
+"dependencies": {
+    "@tiptap/extension-highlight": "^3.3.0",
+    "@tiptap/extension-image": "^3.3.0",
+    "@tiptap/extension-text-align": "^3.3.0",
+    "@tiptap/react": "^3.3.0",
+    "@tiptap/starter-kit": "^3.3.0",
+    "firebase": "^12.1.0",
+    "framer-motion": "^12.23.12",
+    "localforage": "^1.10.0",
+    "match-sorter": "^8.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.8.2",
+    "sort-by": "^1.2.0",
+    "sweetalert2": "^11.22.5",
+    "swiper": "^11.2.10"
+  }
+```
+### **Backend (Server-Side) Dependencies**  
+
+```json
+"dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.19.0"
+  }
+```
+
+### **Development Dependencies**  
+
+```json
+"devDependencies": {
+  "nodemon": "^3.x.x",
+  "eslint": "^8.x.x",
+  "prettier": "^3.x.x"
+}
+```
+
+
 
 ### Run Development
 
