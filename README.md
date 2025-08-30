@@ -7,12 +7,22 @@ This is a **dynamic blog platform** built with **React.js**, **Node.js**, **Expr
 **Live Site:** [DevsAround Blog Website](https://react-auth-private-route-c0a3a.web.app/)
 
 
-**Screenshots/GIF:**  
-![Home Page](Screenshots/home-page.png)  
-![My Blogs Page](Screenshots/my-blogs-page.png)  
-![Create Blogs Page](Screenshots/create-blog-page.png)  
-![All Blog Page](Screenshots/all-blogs-page.png)  
-![Sign In Page](Screenshots/sign-in-page.png)  
+**Screenshots:**
+
+### 🏠 Home Page
+![Home Page](Screenshots/home-page.png)
+
+### ✍️ My Blogs Page
+![My Blogs Page](Screenshots/my-blogs-page.png)
+
+### ➕ Create Blogs Page
+![Create Blogs Page](Screenshots/create-blog-page.png)
+
+### 📚 All Blogs Page
+![All Blog Page](Screenshots/all-blogs-page.png)
+
+### 🔑 Sign In Page
+![Sign In Page](Screenshots/sign-in-page.png)
 
 ---
 
