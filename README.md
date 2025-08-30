@@ -60,21 +60,26 @@ npm run dev
 ```
 
 ---
-### Environment Variables
+# Environment Variables
 
-Frontend (frontend/.env.example):
+## Frontend (frontend/.env.example):
 
-VITE_API_KEY=
-VITE_AUTH_DOMAIN=
-VITE_PROJECT_ID=
-VITE_STORAGE_BUCKET=
-VITE_MESSAGING_SENDER_ID=
-VITE_APP_ID=
+### Firebase Config
+```env
+VITE_API_KEY=your_firebase_api_key_here
+VITE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+VITE_PROJECT_ID=your_project_id
+VITE_STORAGE_BUCKET=your_project_id.appspot.com
+VITE_MESSAGING_SENDER_ID=your_sender_id_here
+VITE_APP_ID=your_app_id_here
+```
+## Backend (backend/.env.example):
 
-Backend (backend/.env.example):
-
-DB_USER=
-DB_PASS=
+### MongoDB Credentials
+```env
+DB_USER=your_mongodb_username_here
+DB_PASS=your_mongodb_password_here
+```
 
 ### **Frontend (Client-Side) Dependencies**
 ```json
